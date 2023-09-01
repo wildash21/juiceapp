@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta property="og:title" content="<%=title%>" />
+        <meta property="og:locale" content="ru_RU" />
+        <meta property="og:description" content="<%=description%>" />
+        <meta property="og:image" content="/logo.png" />
+        <title><%=title%></title>
+        <meta
+            name="viewport"
+            content="width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover, initial-scale=1, maximum-scale=1"
+        />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="<%=title%>" />
+        <meta name="theme-color" content="#000" />
+        <meta name="description" content="<%=description%>" />
+        <link rel="icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+        <style>
+            html {
+                min-width: 100vw;
+                min-height: 100vh;
+
+                --bgcolor: white;
+                --fgcolor: black;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                html {
+                    --bgcolor: #191919;
+                    --fgcolor: white;
+                }
+            }
+
+            body {
+                margin: 0;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-tap-highlight-color: transparent;
+
+                user-select: none;
+                -webkit-user-select: none;
+                -webkit-touch-callout: none;
+
+                background-color: var(--bgcolor);
+                color: var(--fgcolor);
+            }
+
+            .splash-error {
+                width: 280px;
+                position: fixed;
+                bottom: 50%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                text-align: center;
+                font-size: 24px;
+            }
+
+            html[lang='ru'] .splash-error {
+                width: 300px;
+                --text: 'Please enable JavaScript to run this site.';
+            }
+
+            .splash-error::before {
+                content: '⚠️';
+                font-size: 144px;
+                color: #ff6600;
+                margin-bottom: 20px;
+                display: block;
+            }
+
+            .splash-error::after {
+                content: var(--text);
+                display: block;
+            }
+
+            html[lang='ru'] .splash-error {
+                --text: 'Включите JavaScript, чтобы запустить этот сайт.';
+            }
+
+            @media (display-mode: standalone) {
+                .splash-error {
+                    --text: 'Please enable JavaScript to run this app.';
+                }
+
+                html[lang='ru'] .splash-error {
+                    --text: 'Включите JavaScript, чтобы запустить это приложение.';
+                }
+            }
+        </style>
+        <script type="text/javascript">
+            if ('<%=env%>' !== 'development') {
+                // metrika funcions etc
+            }
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="/src/index.tsx"></script>
+        <noscript class="splash-error"></noscript>
+    </body>
+</html>

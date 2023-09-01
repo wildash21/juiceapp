@@ -1,0 +1,21 @@
+html body .ProfileGroup {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 24px 0;
+    height: 172px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: var(--vkui_internal--thin_border);
+        background: var(--vkui--color_background_content);
+        width: calc(100% - 2px);
+        margin-left: 1px;
+        z-index: 2;
+    }
+}

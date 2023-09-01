@@ -1,0 +1,17 @@
+body {
+    .vkuiPanel:not(.vkuiPanelPlain) {
+        &::before,
+        & .vkuiPanel__in {
+            background-color: var(--vkui--color_background);
+        }
+    }
+
+    .react-loading-skeleton {
+        --base-color: var(--vkui--color_skeleton_from);
+        --highlight-color: var(--vkui--color_skeleton_to);
+    }
+
+    .vkuiPanel.full .vkuiPanel__in {
+        min-height: 100%;
+    }
+}

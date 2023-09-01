@@ -1,0 +1,40 @@
+module.exports = {
+    env: {
+        browser: true,
+        es2021: true,
+    },
+    settings: {
+        react: {
+            version: 'detect',
+        },
+    },
+    extends: ['plugin:react/recommended', 'standard-with-typescript'],
+    overrides: [],
+    parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        project: ['tsconfig.json'],
+    },
+    plugins: ['react'],
+    rules: {
+        indent: 'off',
+        'space-in-parens': 'off',
+        'multiline-ternary': 'off',
+        'no-unmodified-loop-condition': 'off',
+        'react/react-in-jsx-scope': 'off',
+        'react/no-unescaped-entities': 'off',
+        '@typescript-eslint/semi': 'off',
+        '@typescript-eslint/indent': 'off',
+        '@typescript-eslint/comma-dangle': 'off',
+        '@typescript-eslint/no-misused-promises': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/member-delimiter-style': 'off',
+        '@typescript-eslint/promise-function-async': 'off',
+        '@typescript-eslint/strict-boolean-expressions': 'off',
+        '@typescript-eslint/space-before-function-paren': 'off',
+        '@typescript-eslint/no-confusing-void-expression': 'off',
+        '@typescript-eslint/restrict-template-expressions': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+    },
+}

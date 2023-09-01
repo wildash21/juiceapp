@@ -191,7 +191,6 @@ export default function Profile({ id }: { id: string }) {
                 <PanelHeader separator={false} before={<ThemeSwitcher />}>
                     VKUI
                 </PanelHeader>
-                <div className='borderCutter' />
                 {panelContent}
             </Panel>
             <Panel className='vkuiPanelPlain' id='friends'>
